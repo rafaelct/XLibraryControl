@@ -1,0 +1,69 @@
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.exe
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.deps.json
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.runtimeconfig.json
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.runtimeconfig.dev.json
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\ref\X library Control.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.pdb
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbprojAssemblyReference.cache
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X_library_Control.Form1.resources
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbproj.GenerateResource.cache
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.AssemblyInfoInputs.cache
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.AssemblyInfo.vb
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbproj.CoreCompileInputs.cache
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\ref\X library Control.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.pdb
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.genruntimeconfig.cache
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\rafa_wpjrwmb\source\repos\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbproj.CopyComplete
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.exe
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.deps.json
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.runtimeconfig.json
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.runtimeconfig.dev.json
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\ref\X library Control.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\X library Control.pdb
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\XLibraryControl\X library Control\X library Control\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbprojAssemblyReference.cache
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X_library_Control.Form1.resources
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbproj.GenerateResource.cache
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.GeneratedMSBuildEditorConfig.editorconfig
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.AssemblyInfoInputs.cache
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.AssemblyInfo.vb
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbproj.CoreCompileInputs.cache
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.vbproj.CopyComplete
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.dll
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\ref\X library Control.dll
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.pdb
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X library Control.genruntimeconfig.cache
+C:\XLibraryControl\X library Control\X library Control\obj\Debug\net5.0-windows\X_library_Control.Resources.resources

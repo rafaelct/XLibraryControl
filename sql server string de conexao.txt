@@ -1,0 +1,27 @@
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+================================================
+
+--
+-- run below commmand from command prompt
+-- sqlcmd -S DESKTOP-ARQN95H\SQLEXPRESS -E
+--
+
+select @@Version
+go
+                                                                                                                                                                                                                                                
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
+        Sep 24 2019 13:48:23
+        Copyright (C) 2019 Microsoft Corporation
+        Express Edition (64-bit) on Windows 10 Home 10.0 <X64> (Build 19042: )
+
+
+(1 rows affected)
+1>
+
+=====================================================
+
+https://docs.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql?view=sql-server-ver15
+https://www.w3schools.com/sql/sql_foreignkey.asp
+
