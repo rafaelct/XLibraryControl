@@ -12,7 +12,7 @@
 
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles edRaAluno.KeyPress, edDddAlu.KeyPress, edTelefoneAlu.KeyPress, edCodLiv.KeyPress, edRaEmp.KeyPress, edCodEmp.KeyPress
 
         Dim validaCampos As New ValidaCampos
         e.KeyChar = ValidaCampos.ApenasNumeros(e.KeyChar)
@@ -306,6 +306,24 @@
 
     Private Sub btPesquisarLiv_Click(sender As Object, e As EventArgs) Handles btPesquisarLiv.Click
 
+        If edCodLiv.Text = "" Then
+            MsgBox("Cod. do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+
+        Dim dbConnectExiste As New DBConnect()
+        Dim myConnExiste = dbConnectExiste.Open()
+
+        Dim dbLivrosExiste As New DBLivros(myConnExiste)
+
+        If dbLivrosExiste.TemLivro(edCodLiv.Text) = False Then
+            MsgBox("Livro não encontrado", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            dbConnectExiste.Close()
+            Return
+        End If
+
+        dbConnectExiste.Close()
 
         Dim dbConnect As New DBConnect()
         Dim myConn = dbConnect.Open()
@@ -327,6 +345,71 @@
     End Sub
 
     Private Sub btAtuLiv_Click(sender As Object, e As EventArgs) Handles btAtuLiv.Click
+
+        If edCodLiv.Text = "" Then
+            MsgBox("Cod. do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edTituloLiv.Text = "" Then
+            MsgBox("Titulo do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edTituloLiv.TextLength = 1 Then
+            MsgBox("Titulo não pode ter apenas 1 letra.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If ValidaCampos.ApenasLetras(edTituloLiv.Text) = False Then
+            MsgBox("Campo titulo só pode ter letras.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edAutorLiv.Text = "" Then
+            MsgBox("Nome do autor deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edAutorLiv.TextLength = 1 Then
+            MsgBox("Autor não pode ter apenas 1 letra.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If ValidaCampos.ApenasLetras(edAutorLiv.Text) = False Then
+            MsgBox("Campo autor só pode ter letras.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edEditoraLiv.Text = "" Then
+            MsgBox("Editora deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edEditoraLiv.TextLength = 1 Then
+            MsgBox("Editora não pode ter apenas 1 letra.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If ValidaCampos.ApenasLetras(edEditoraLiv.Text) = False Then
+            MsgBox("Campo editora só pode ter letras.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edCategoriaLiv.Text = "" Then
+            MsgBox("Categoria deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edCategoriaLiv.TextLength = 1 Then
+            MsgBox("Categoria não pode ter apenas 1 letra.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If ValidaCampos.ApenasLetras(edCategoriaLiv.Text) = False Then
+            MsgBox("Campo categoria só pode ter letras.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
 
 
         Dim livro As New Livro()
@@ -406,6 +489,16 @@
 
     Private Sub btExcLiv_Click(sender As Object, e As EventArgs) Handles btExcLiv.Click
 
+        If edCodLiv.Text = "" Then
+            MsgBox("Cod. do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edTituloLiv.Text = "" Then
+            MsgBox("Titulo do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
 
         Dim uiLvLivros As New UiLvLivros(lvLivros)
 
@@ -468,6 +561,17 @@
 
     Private Sub btConfirmaEmp_Click(sender As Object, e As EventArgs) Handles btConfirmaEmp.Click
 
+        If edRaEmp.Text = "" Then
+            MsgBox("RA do aluno deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edCodEmp.Text = "" And rbEmpLiv.Checked = True Then
+            MsgBox("Cod. do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+
         Dim empLivro As New EmpLivro()
 
         empLivro.SetRa(edRaEmp.Text)
@@ -524,6 +628,34 @@
 
     Private Sub btPesquisarAlu_Click(sender As Object, e As EventArgs) Handles btPesquisarAlu.Click
 
+        If edRaAluno.Text = "" Then
+            MsgBox("RA do aluno deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edRaAluno.TextLength <> 8 Then
+            MsgBox("RA do aluno deve ter 8 digitos.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+
+
+        Dim dbConnectExiste As New DBConnect()
+        Dim myConnExiste = dbConnectExiste.Open()
+
+        Dim dbAlunosExiste As New DBAlunos(myConnExiste)
+
+
+
+
+        If dbAlunosExiste.TemAluno(edRaAluno.Text) = False Then
+            MsgBox("Aluno não encontrado", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            dbConnectExiste.Close()
+            Return
+        End If
+
+        dbConnectExiste.Close()
+
         Dim dbConnect As New DBConnect()
         Dim myConn = dbConnect.Open()
 
@@ -544,6 +676,71 @@
     End Sub
 
     Private Sub btAtualizarAlu_Click(sender As Object, e As EventArgs) Handles btAtualizarAlu.Click
+
+        If edRaAluno.Text = "" Then
+            MsgBox("RA do aluno deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edRaAluno.TextLength <> 8 Then
+            MsgBox("RA do aluno deve ter 8 digitos.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edNomeAlu.Text = "" Then
+            MsgBox("Nome do aluno deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edNomeAlu.TextLength = 1 Then
+            MsgBox("Nome não pode ter apenas 1 letra.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If ValidaCampos.ApenasLetras(edNomeAlu.Text) = False Then
+            MsgBox("Campo nome só pode ter letras.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edDddAlu.Text = "" Then
+            MsgBox("DDD deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edDddAlu.TextLength <> 2 Then
+            MsgBox("DDD precisa ter 2 digitos.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edTelefoneAlu.Text = "" Then
+            MsgBox("Telefone deve ser preenchido", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edTelefoneAlu.TextLength <> 9 Then
+            MsgBox("Telefone precisa ter 9 digitos.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edEmailAlu.Text = "" Then
+            MsgBox("E-mail deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If ValidaCampos.ValidaEmail(edEmailAlu.Text) = False Then
+            MsgBox("E-mail invalido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        Dim dataAtual As Date = Now
+
+        Dim contaDias = DateDiff(DateInterval.Day, dtpDataNascAlu.Value, dataAtual)
+
+        ' O aluno deve ter no minimo 4 anos de idade para ser cadastrado no sistema
+        If contaDias < 1460 Then
+            MsgBox("Data de nascimento não pode ser menor que 4 anos.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
 
 
         Dim aluno As New Aluno()
@@ -622,6 +819,16 @@
 
     Private Sub btExcluirAlu_Click_1(sender As Object, e As EventArgs) Handles btExcluirAlu.Click
 
+        If edRaAluno.Text = "" Then
+            MsgBox("RA do aluno deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+        If edRaAluno.TextLength <> 8 Then
+            MsgBox("RA do aluno deve ter 8 digitos.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
         Dim uiLvAlunos As New UiLvAlunos(LvAlunos)
 
         Dim dbConnect As New DBConnect()
@@ -671,4 +878,6 @@
 
 
     End Sub
+
+
 End Class

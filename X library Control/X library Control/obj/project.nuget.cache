@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "toEjoj9Z+XI36lNxLR5EuJz/XSxktS2+cM63Kn8FAB+2DIxOILj5Eq00AzstQX0HPTkVFM5fce0SecoHY7gjmA==",
+  "dgSpecHash": "Pm6qlRCu+hSGBXH2gSUKpS6JLqBy51bQkE0xXRNrSUk2Mtl3J02XGQQ0qkOqYSQLASZu+hfJ5beSzO3bJ+4Kbg==",
   "success": true,
-  "projectFilePath": "C:\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj",
+  "projectFilePath": "C:\\Users\\rafa\\OneDrive\\Área de Trabalho\\myProjects\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafa\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.2\\microsoft.extensions.configuration.3.1.2.nupkg.sha512",
     "C:\\Users\\rafa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.2\\microsoft.extensions.configuration.abstractions.3.1.2.nupkg.sha512",

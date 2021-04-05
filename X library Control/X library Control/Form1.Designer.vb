@@ -130,7 +130,6 @@ Partial Class Form1
         Me.btExcluirAlu.Name = "btExcluirAlu"
         Me.btExcluirAlu.Size = New System.Drawing.Size(64, 64)
         Me.btExcluirAlu.TabIndex = 9
-        Me.btExcluirAlu.Text = "Excluir"
         Me.btExcluirAlu.UseVisualStyleBackColor = True
         '
         'Label13
@@ -313,7 +312,6 @@ Partial Class Form1
         Me.btExcLiv.Name = "btExcLiv"
         Me.btExcLiv.Size = New System.Drawing.Size(64, 64)
         Me.btExcLiv.TabIndex = 17
-        Me.btExcLiv.Text = "Excluir"
         Me.btExcLiv.UseVisualStyleBackColor = True
         '
         'lvLivros

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj": {}
+    "C:\\Users\\rafa\\OneDrive\\Área de Trabalho\\myProjects\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj": {}
   },
   "projects": {
-    "C:\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj": {
+    "C:\\Users\\rafa\\OneDrive\\Área de Trabalho\\myProjects\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj",
+        "projectUniqueName": "C:\\Users\\rafa\\OneDrive\\Área de Trabalho\\myProjects\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj",
         "projectName": "X library Control",
-        "projectPath": "C:\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj",
+        "projectPath": "C:\\Users\\rafa\\OneDrive\\Área de Trabalho\\myProjects\\XLibraryControl\\X library Control\\X library Control\\X library Control.vbproj",
         "packagesPath": "C:\\Users\\rafa\\.nuget\\packages\\",
-        "outputPath": "C:\\XLibraryControl\\X library Control\\X library Control\\obj\\",
+        "outputPath": "C:\\Users\\rafa\\OneDrive\\Área de Trabalho\\myProjects\\XLibraryControl\\X library Control\\X library Control\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
