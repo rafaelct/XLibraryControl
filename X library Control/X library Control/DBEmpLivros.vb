@@ -100,4 +100,51 @@ Public Class DBEmpLivros
 
     End Function
 
+    Public Function TemLivro(codLivro As Integer) As Boolean
+
+        Dim existeLivro = False
+
+        Dim sqlCmd As New SqlCommand("pSelEmpLivro", Me.myConn)
+        sqlCmd.CommandType = CommandType.StoredProcedure
+        sqlCmd.CommandTimeout = 36000
+        sqlCmd.Parameters.AddWithValue("@codLivro", codLivro)
+
+        dr = sqlCmd.ExecuteReader()
+
+        While (dr.Read)
+
+            existeLivro = True
+
+        End While
+
+        dr.Close()
+
+        Return existeLivro
+
+    End Function
+
+    Public Function TemAluno(ra As Integer) As Boolean
+
+        Dim existeAluno = False
+
+        Dim sqlCmd As New SqlCommand("pSelEmpRa", Me.myConn)
+        sqlCmd.CommandType = CommandType.StoredProcedure
+        sqlCmd.CommandTimeout = 36000
+        sqlCmd.Parameters.AddWithValue("@ra", ra)
+
+        dr = sqlCmd.ExecuteReader()
+
+        While (dr.Read)
+
+            existeAluno = True
+
+        End While
+
+        dr.Close()
+
+        Return existeAluno
+
+    End Function
+
+
 End Class

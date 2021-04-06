@@ -73,9 +73,9 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.edRaEmp = New System.Windows.Forms.TextBox()
         Me.TabRel = New System.Windows.Forms.TabPage()
-        Me.btRelAlu = New System.Windows.Forms.Button()
-        Me.btRelLiv = New System.Windows.Forms.Button()
         Me.btRelEmp = New System.Windows.Forms.Button()
+        Me.btRelLiv = New System.Windows.Forms.Button()
+        Me.btRelAlu = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabAlu.SuspendLayout()
         Me.TabLiv.SuspendLayout()
@@ -539,14 +539,14 @@ Partial Class Form1
         Me.TabRel.Text = "Relatorios"
         Me.TabRel.UseVisualStyleBackColor = True
         '
-        'btRelAlu
+        'btRelEmp
         '
-        Me.btRelAlu.Location = New System.Drawing.Point(44, 39)
-        Me.btRelAlu.Name = "btRelAlu"
-        Me.btRelAlu.Size = New System.Drawing.Size(299, 23)
-        Me.btRelAlu.TabIndex = 0
-        Me.btRelAlu.Text = "Exportar relatorio de alunos cadastrados. (*.csv)"
-        Me.btRelAlu.UseVisualStyleBackColor = True
+        Me.btRelEmp.Location = New System.Drawing.Point(44, 147)
+        Me.btRelEmp.Name = "btRelEmp"
+        Me.btRelEmp.Size = New System.Drawing.Size(299, 23)
+        Me.btRelEmp.TabIndex = 2
+        Me.btRelEmp.Text = "Exportar relatorio de livros emprestados. (*.csv)"
+        Me.btRelEmp.UseVisualStyleBackColor = True
         '
         'btRelLiv
         '
@@ -557,14 +557,14 @@ Partial Class Form1
         Me.btRelLiv.Text = "Exportar relatorio de livros cadastrados. (*.csv)"
         Me.btRelLiv.UseVisualStyleBackColor = True
         '
-        'btRelEmp
+        'btRelAlu
         '
-        Me.btRelEmp.Location = New System.Drawing.Point(44, 147)
-        Me.btRelEmp.Name = "btRelEmp"
-        Me.btRelEmp.Size = New System.Drawing.Size(299, 23)
-        Me.btRelEmp.TabIndex = 2
-        Me.btRelEmp.Text = "Exportar relatorio de livros emprestados. (*.csv)"
-        Me.btRelEmp.UseVisualStyleBackColor = True
+        Me.btRelAlu.Location = New System.Drawing.Point(44, 39)
+        Me.btRelAlu.Name = "btRelAlu"
+        Me.btRelAlu.Size = New System.Drawing.Size(299, 23)
+        Me.btRelAlu.TabIndex = 0
+        Me.btRelAlu.Text = "Exportar relatorio de alunos cadastrados. (*.csv)"
+        Me.btRelAlu.UseVisualStyleBackColor = True
         '
         'Form1
         '

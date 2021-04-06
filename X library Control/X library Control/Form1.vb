@@ -496,10 +496,18 @@ Public Class Form1
             Return
         End If
 
-        If edTituloLiv.Text = "" Then
-            MsgBox("Titulo do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+
+        Dim dbConnectTemEmpLivro As New DBConnect()
+        Dim myConnTemEmpLivro = dbConnectTemEmpLivro.Open()
+        Dim dbEmpLivros As New DBEmpLivros(myConnTemEmpLivro)
+        Dim temEmpLivro = dbEmpLivros.TemLivro(edCodLiv.Text)
+        dbConnectTemEmpLivro.Close()
+
+        If temEmpLivro = True Then
+            MsgBox("Não é possivel excluir um livro que já tenha sido emprestado.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical Or MsgBoxStyle.SystemModal, "Mensagem")
             Return
         End If
+
 
 
         Dim uiLvLivros As New UiLvLivros(lvLivros)
@@ -831,6 +839,18 @@ Public Class Form1
             Return
         End If
 
+        Dim dbConnectTemEmpAluno As New DBConnect()
+        Dim myConnTemEmpAluno = dbConnectTemEmpAluno.Open()
+        Dim dbEmpLivros As New DBEmpLivros(myConnTemEmpAluno)
+        Dim temEmpAluno = dbEmpLivros.TemAluno(edRaAluno.Text)
+        dbConnectTemEmpAluno.Close()
+
+        If temEmpAluno = True Then
+            MsgBox("Não é possivel excluir um aluno que tenha emprestado livro.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+            Return
+        End If
+
+
         Dim uiLvAlunos As New UiLvAlunos(LvAlunos)
 
         Dim dbConnect As New DBConnect()
@@ -1053,6 +1073,10 @@ Public Class Form1
             arquivo.Close()
         End Try
 
+
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
 
     End Sub
 End Class
