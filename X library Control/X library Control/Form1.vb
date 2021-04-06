@@ -486,6 +486,7 @@ Public Class Form1
         End If
 
         edCodLiv.Text = ""
+        edTituloLiv.Text = ""
         edAutorLiv.Text = ""
         edEditoraLiv.Text = ""
         edCategoriaLiv.Text = ""
@@ -562,6 +563,7 @@ Public Class Form1
 
         edCodLiv.Text = ""
         edAutorLiv.Text = ""
+        edTituloLiv.Text = ""
         edEditoraLiv.Text = ""
         edCategoriaLiv.Text = ""
 
