@@ -72,10 +72,15 @@ Partial Class Form1
         Me.edCodEmp = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.edRaEmp = New System.Windows.Forms.TextBox()
+        Me.TabRel = New System.Windows.Forms.TabPage()
+        Me.btRelAlu = New System.Windows.Forms.Button()
+        Me.btRelLiv = New System.Windows.Forms.Button()
+        Me.btRelEmp = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabAlu.SuspendLayout()
         Me.TabLiv.SuspendLayout()
         Me.tabEmpLiv.SuspendLayout()
+        Me.TabRel.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -83,6 +88,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabAlu)
         Me.TabControl1.Controls.Add(Me.TabLiv)
         Me.TabControl1.Controls.Add(Me.tabEmpLiv)
+        Me.TabControl1.Controls.Add(Me.TabRel)
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -521,6 +527,45 @@ Partial Class Form1
         Me.edRaEmp.Size = New System.Drawing.Size(146, 23)
         Me.edRaEmp.TabIndex = 20
         '
+        'TabRel
+        '
+        Me.TabRel.Controls.Add(Me.btRelEmp)
+        Me.TabRel.Controls.Add(Me.btRelLiv)
+        Me.TabRel.Controls.Add(Me.btRelAlu)
+        Me.TabRel.Location = New System.Drawing.Point(4, 24)
+        Me.TabRel.Name = "TabRel"
+        Me.TabRel.Size = New System.Drawing.Size(778, 398)
+        Me.TabRel.TabIndex = 3
+        Me.TabRel.Text = "Relatorios"
+        Me.TabRel.UseVisualStyleBackColor = True
+        '
+        'btRelAlu
+        '
+        Me.btRelAlu.Location = New System.Drawing.Point(44, 39)
+        Me.btRelAlu.Name = "btRelAlu"
+        Me.btRelAlu.Size = New System.Drawing.Size(299, 23)
+        Me.btRelAlu.TabIndex = 0
+        Me.btRelAlu.Text = "Exportar relatorio de alunos cadastrados. (*.csv)"
+        Me.btRelAlu.UseVisualStyleBackColor = True
+        '
+        'btRelLiv
+        '
+        Me.btRelLiv.Location = New System.Drawing.Point(44, 95)
+        Me.btRelLiv.Name = "btRelLiv"
+        Me.btRelLiv.Size = New System.Drawing.Size(299, 23)
+        Me.btRelLiv.TabIndex = 1
+        Me.btRelLiv.Text = "Exportar relatorio de livros cadastrados. (*.csv)"
+        Me.btRelLiv.UseVisualStyleBackColor = True
+        '
+        'btRelEmp
+        '
+        Me.btRelEmp.Location = New System.Drawing.Point(44, 147)
+        Me.btRelEmp.Name = "btRelEmp"
+        Me.btRelEmp.Size = New System.Drawing.Size(299, 23)
+        Me.btRelEmp.TabIndex = 2
+        Me.btRelEmp.Text = "Exportar relatorio de livros emprestados. (*.csv)"
+        Me.btRelEmp.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -536,6 +581,7 @@ Partial Class Form1
         Me.TabLiv.PerformLayout()
         Me.tabEmpLiv.ResumeLayout(False)
         Me.tabEmpLiv.PerformLayout()
+        Me.TabRel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -590,4 +636,8 @@ Partial Class Form1
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents btAtualizarAlu As Button
+    Friend WithEvents TabRel As TabPage
+    Friend WithEvents btRelLiv As Button
+    Friend WithEvents btRelAlu As Button
+    Friend WithEvents btRelEmp As Button
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.IO
+
+Public Class Form1
     Private Sub TabCadLiv_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -879,5 +881,178 @@
 
     End Sub
 
+    Private Sub btRelAlu_Click(sender As Object, e As EventArgs) Handles btRelAlu.Click
 
+        Dim arquivo As System.IO.StreamWriter
+
+        Try
+
+
+
+
+            Dim sfd As New SaveFileDialog()
+            sfd.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*"
+
+            If sfd.ShowDialog() = Windows.Forms.DialogResult.OK Then
+
+                MessageBox.Show(sfd.FileName)
+
+
+                arquivo = My.Computer.FileSystem.OpenTextFileWriter(sfd.FileName, True)
+
+
+
+                Dim dbConnect As New DBConnect()
+                Dim myConn = dbConnect.Open()
+
+                Dim dbAlunos As New DBAlunos(myConn)
+
+                Dim listaAlunos As New List(Of Aluno)
+
+                listaAlunos = dbAlunos.ListarAlunos()
+
+                arquivo.WriteLine("RA;NOME;DDD;TELEFONE;E-MAIL;DATA DE NASCIMENTO")
+
+                For Each aluno As Aluno In listaAlunos
+                    Dim linha As String
+                    linha = aluno.GetRa().ToString + ";" + aluno.GetNome() + ";" + aluno.GetDdd().ToString + ";" + aluno.GetTelefone().ToString + ";" + aluno.GetEmail() + ";" + aluno.GetDataNascimento()
+                    arquivo.WriteLine(linha)
+                Next
+
+                arquivo.Close()
+
+                MsgBox("Relatorio de alunos gerado.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Information, "Mensagem")
+
+
+            End If
+
+        Catch ex As IOException
+            MsgBox("Erro de entrada e saida ao tentar gravar relatorio.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Information, "Mensagem")
+            arquivo.Close()
+        Catch ex As Exception
+            MsgBox("Erro desconhecido ao tentar gravar relatorio.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Information, "Mensagem")
+            arquivo.Close()
+        End Try
+
+
+
+
+    End Sub
+
+    Private Sub btRelLiv_Click(sender As Object, e As EventArgs) Handles btRelLiv.Click
+
+        Dim arquivo As System.IO.StreamWriter
+
+        Try
+
+            Dim sfd As New SaveFileDialog()
+            sfd.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*"
+
+            If sfd.ShowDialog() = Windows.Forms.DialogResult.OK Then
+
+                MessageBox.Show(sfd.FileName)
+
+
+                arquivo = My.Computer.FileSystem.OpenTextFileWriter(sfd.FileName, True)
+
+
+
+                Dim dbConnect As New DBConnect()
+                Dim myConn = dbConnect.Open()
+
+                Dim dbLivros As New DBLivros(myConn)
+
+                Dim listaLivros As New List(Of Livro)
+
+                listaLivros = dbLivros.ListarLivros()
+
+                arquivo.WriteLine("COD. LIVRO;TITULO;AUTOR;EDITORA;CATEGORIA")
+
+                For Each livro As Livro In listaLivros
+                    Dim linha As String
+                    linha = livro.GetCodLivro().ToString + ";" + livro.GetTitulo() + ";" + livro.GetAutor().ToString + ";" + livro.GetEditora().ToString + ";" + livro.GetCategoria()
+                    arquivo.WriteLine(linha)
+                Next
+
+                arquivo.Close()
+
+                MsgBox("Relatorio de livros gerado.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Information, "Mensagem")
+
+
+
+
+
+            End If
+
+        Catch ex As IOException
+            MsgBox("Erro de entrada e saida ao tentar gravar relatorio.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Information, "Mensagem")
+            arquivo.Close()
+        Catch ex As Exception
+            MsgBox("Erro desconhecido ao tentar gravar relatorio.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Information, "Mensagem")
+            arquivo.Close()
+        End Try
+
+    End Sub
+
+    Private Sub btRelEmp_Click(sender As Object, e As EventArgs) Handles btRelEmp.Click
+
+        Dim arquivo As System.IO.StreamWriter
+
+        Try
+
+            Dim sfd As New SaveFileDialog()
+            sfd.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*"
+
+            If sfd.ShowDialog() = Windows.Forms.DialogResult.OK Then
+
+                MessageBox.Show(sfd.FileName)
+
+
+                arquivo = My.Computer.FileSystem.OpenTextFileWriter(sfd.FileName, False)
+
+
+
+                Dim dbConnect As New DBConnect()
+                Dim myConn = dbConnect.Open()
+
+                Dim dbEmpLivros As New DBEmpLivros(myConn)
+
+                Dim listaEmpLivros As New List(Of EmpRel)
+
+                listaEmpLivros = dbEmpLivros.ListarEmpLivros()
+
+                arquivo.WriteLine("RA;NOME;DDD;TELEFONE;E-MAIL;DATA DE NASCIMENTO;COD. LIVRO;TITULO;AUTOR;EDITORA;CATEGORIA;DATA DE RETIRADA;DATA DE ENTREGA")
+
+                For Each empRel As EmpRel In listaEmpLivros
+                    Dim linha As String
+
+                    If empRel.GetDataEntregaTemNulo() = False Then
+                        linha = empRel.GetRa().ToString + ";" + empRel.GetNome() + ";" + empRel.GetDdd().ToString + ";" + empRel.GetTelefone().ToString + ";" + empRel.GetEmail() + ";" + empRel.GetDataNascimento() + ";" + empRel.GetCodLivro().ToString + ";" + empRel.GetTitulo() + ";" + empRel.GetAutor().ToString + ";" + empRel.GetEditora().ToString + ";" + empRel.GetCategoria() + ";" + empRel.GetDataRetirada() + ";" + empRel.GetDataEntrega()
+                    Else
+                        linha = empRel.GetRa().ToString + ";" + empRel.GetNome() + ";" + empRel.GetDdd().ToString + ";" + empRel.GetTelefone().ToString + ";" + empRel.GetEmail() + ";" + empRel.GetDataNascimento() + ";" + empRel.GetCodLivro().ToString + ";" + empRel.GetTitulo() + ";" + empRel.GetAutor().ToString + ";" + empRel.GetEditora().ToString + ";" + empRel.GetCategoria() + ";" + empRel.GetDataRetirada() + ";"
+                    End If
+
+                    arquivo.WriteLine(linha)
+                Next
+
+                arquivo.Close()
+
+                MsgBox("Relatorio de emprestimos gerado.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Information, "Mensagem")
+
+
+
+
+
+            End If
+
+        Catch ex As IOException
+            MsgBox("Erro de entrada e saida ao tentar gravar relatorio.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Information, "Mensagem")
+            arquivo.Close()
+        Catch ex As Exception
+            MsgBox("Erro desconhecido ao tentar gravar relatorio.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Information, "Mensagem")
+            arquivo.Close()
+        End Try
+
+
+    End Sub
 End Class
