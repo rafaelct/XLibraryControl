@@ -485,6 +485,10 @@ Public Class Form1
 
         End If
 
+        edCodLiv.Text = ""
+        edAutorLiv.Text = ""
+        edEditoraLiv.Text = ""
+        edCategoriaLiv.Text = ""
 
 
     End Sub
@@ -556,6 +560,10 @@ Public Class Form1
 
         End If
 
+        edCodLiv.Text = ""
+        edAutorLiv.Text = ""
+        edEditoraLiv.Text = ""
+        edCategoriaLiv.Text = ""
 
     End Sub
 
@@ -580,6 +588,9 @@ Public Class Form1
             MsgBox("Cod. do livro deve ser preenchido.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
             Return
         End If
+
+        Dim limpaCampos As Boolean
+        limpaCampos = False
 
 
         Dim empLivro As New EmpLivro()
@@ -607,6 +618,7 @@ Public Class Form1
         Dim resposta As New Integer()
 
         If codigoRetorno = 0 Then
+            limpaCampos = True
             resposta = MsgBox("Operação realizada", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Information, "Mensagem")
         End If
 
@@ -632,6 +644,11 @@ Public Class Form1
 
         If codigoRetorno = 5 Then
             resposta = MsgBox("Livro não encontrado no sistema.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
+        End If
+
+        If limpaCampos = True Then
+            edRaEmp.Text = ""
+            edCodEmp.Text = ""
         End If
 
     End Sub
@@ -742,6 +759,9 @@ Public Class Form1
             Return
         End If
 
+        Dim limpaCampos As Boolean
+        limpaCampos = False
+
         Dim dataAtual As Date = Now
 
         Dim contaDias = DateDiff(DateInterval.Day, dtpDataNascAlu.Value, dataAtual)
@@ -794,6 +814,9 @@ Public Class Form1
                     For Each itemlista As Aluno In listaAlunos
                         uiLvAlunos.Add(itemlista)
                     Next
+
+                    limpaCampos = True
+
                 Else
                     MsgBox("Erro ao tentar efetuar atualização.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
                 End If
@@ -814,6 +837,8 @@ Public Class Form1
 
                 If codRetorno1 = 0 Then
                     uiLvAlunos.Add(aluno)
+
+                    limpaCampos = True
                     MsgBox("Cadastro realizado.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Information, "Mensagem")
                 Else
                     MsgBox("Erro ao tentar efetuar cadastro.", MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or MsgBoxStyle.Critical, "Mensagem")
@@ -824,6 +849,15 @@ Public Class Form1
 
         End If
 
+
+        If limpaCampos = True Then
+            edRaAluno.Text = ""
+            edNomeAlu.Text = ""
+            edDddAlu.Text = ""
+            edTelefoneAlu.Text = ""
+            edEmailAlu.Text = ""
+            dtpDataNascAlu.Value = dataAtual
+        End If
 
     End Sub
 
@@ -897,6 +931,14 @@ Public Class Form1
 
         End If
 
+        Dim dataAtual As Date = Now
+
+        edRaAluno.Text = ""
+        edNomeAlu.Text = ""
+        edDddAlu.Text = ""
+        edTelefoneAlu.Text = ""
+        edEmailAlu.Text = ""
+        dtpDataNascAlu.Value = dataAtual
 
 
     End Sub
@@ -918,7 +960,7 @@ Public Class Form1
                 MessageBox.Show(sfd.FileName)
 
 
-                arquivo = My.Computer.FileSystem.OpenTextFileWriter(sfd.FileName, True)
+                arquivo = My.Computer.FileSystem.OpenTextFileWriter(sfd.FileName, False)
 
 
 
@@ -973,7 +1015,7 @@ Public Class Form1
                 MessageBox.Show(sfd.FileName)
 
 
-                arquivo = My.Computer.FileSystem.OpenTextFileWriter(sfd.FileName, True)
+                arquivo = My.Computer.FileSystem.OpenTextFileWriter(sfd.FileName, False)
 
 
 
